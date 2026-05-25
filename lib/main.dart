@@ -22,7 +22,7 @@ class ScoreKeeperApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ScoreKeeper',
+      title: 'Cần Câu Cơm',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(

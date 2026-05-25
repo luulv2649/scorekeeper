@@ -344,9 +344,9 @@ class _ScoreInputCard extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodyLarge),
             ),
 
-            // -10
+            // -5
             IconButton(
-              onPressed: () => onAdjust(-10),
+              onPressed: () => onAdjust(-5),
               icon: const Icon(Icons.remove_circle_rounded),
               color: Colors.red.shade400,
               iconSize: 26,
@@ -377,9 +377,9 @@ class _ScoreInputCard extends StatelessWidget {
               ),
             ),
 
-            // +10
+            // +5
             IconButton(
-              onPressed: () => onAdjust(10),
+              onPressed: () => onAdjust(5),
               icon: const Icon(Icons.add_circle_rounded),
               color: Colors.green.shade600,
               iconSize: 26,

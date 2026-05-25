@@ -4,6 +4,7 @@ import '../providers/game_store.dart';
 import '../models/game_model.dart';
 import '../utils/helpers.dart';
 import 'add_round_screen.dart';
+import 'game_result_screen.dart';
 
 class GamePlayScreen extends StatelessWidget {
   final String gameID;
@@ -95,7 +96,17 @@ class _GamePlayContent extends StatelessWidget {
             FilledButton(
               onPressed: () {
                 store.finishGame(game.id);
-                Navigator.pop(context);
+                Navigator.pop(context); // đóng dialog
+                // Lấy game đã cập nhật rồi navigate sang màn hình kết quả
+                final finishedGame = store.gameById(game.id);
+                if (finishedGame != null) {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => GameResultScreen(game: finishedGame),
+                    ),
+                  );
+                }
               },
               child: const Text('Kết thúc'),
             ),

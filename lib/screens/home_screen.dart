@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
         slivers: [
           // ── App Bar ──────────────────────────────────────────────────────────
           SliverAppBar.large(
-            title: const Text('ScoreKeeper'),
+            title: const Text('Cần Câu Cơm'),
             centerTitle: false,
             actions: [
               IconButton(
